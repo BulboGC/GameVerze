@@ -23,3 +23,24 @@
   font-weight: 400;
   letter-spacing: 2.8px;
 }
+
+.cardTXT {
+  font-family: $font-bebas;
+  letter-spacing: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: $md-res-font;
+}
+
+.footerTXT {
+  width: 80%;
+  opacity: 30%;
+  padding: 10px;
+  font-weight: 400;
+  letter-spacing: 1.05px;
+  word-wrap: break-word;
+  font-size: $sm-font;
+}

@@ -49,7 +49,7 @@ export default function Navbar() {
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered w-32 md:w-auto bg-transparent"
+            className={`${text.linkTXT} border-white input input-bordered w-32 md:w-auto bg-transparent`}
           />
         </div>
       </div>

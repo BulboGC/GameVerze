@@ -7,6 +7,14 @@ module.exports = {
     "./src/styles/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      white: "#ffffff",
+      black: "#141414",
+      blacktwo: "#0F0F0F",
+    },
+
     extend: {
       animation: {
         fadeIn: "fadeIn 2s ease-in forwards",

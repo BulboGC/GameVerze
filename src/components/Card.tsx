@@ -13,7 +13,7 @@ export default function Card() {
           />
         </figure>
         <div className="card-body">
-          <h2>Shoes!</h2>
+          <h2 className={text.cardTXT}>Card</h2>
         </div>
       </div>
     </div>
