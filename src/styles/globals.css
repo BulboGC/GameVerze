@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*
+font-family: 'Aclonica', sans-serif;
+font-family: 'Bebas Neue', sans-serif;
+font-family: 'Inter', sans-serif (100 a 800);
+*/
+
+:root {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+* {
+  color: aliceblue;
+  background-color: 141414;
+}
+
+/* ---------------------------- animations global --------------------------- */
+
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s ease-in-out alternate both;
+  animation: text-focus-in 1s ease-in-out alternate both;
+}
+
+/*
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

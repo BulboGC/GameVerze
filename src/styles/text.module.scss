@@ -1,0 +1,25 @@
+@import "variables";
+
+/* ----------------------------- Texts ----------------------------- */
+
+.bgLogo {
+  width: 100vw;
+  margin-right: 50px;
+}
+
+.linkTXT {
+  margin: 0px 1vw;
+  letter-spacing: 2.8px;
+  font-size: $md-font;
+  font-family: $font-bebas;
+}
+
+.smallHDTXT {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 30px;
+  font-size: $md-font;
+  font-family: $font-bebas;
+  font-weight: 400;
+  letter-spacing: 2.8px;
+}

@@ -1,0 +1,57 @@
+@import "variables";
+
+/* ----------------------------- Primary button ----------------------------- */
+.primaryButton {
+  padding: 0px 20px;
+  background-color: transparent;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: $sm-font;
+  border: 1px solid;
+  z-index: 1;
+}
+.primaryButton::before,
+.primaryButton::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: $color-primary;
+  transition: 1s ease;
+}
+.primaryButton::before {
+  top: -1em;
+  left: -1em;
+}
+.primaryButton::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+.primaryButton:hover::before,
+.primaryButton:hover::after {
+  height: 200px;
+  width: 200px;
+}
+.primaryButton:hover {
+  color: rgb(10, 25, 30);
+}
+.primaryButton:active {
+  filter: brightness(0.8);
+}
+
+/* ------------------------------ Link button ------------------------------- */
+.linkButton {
+  background-color: transparent !important;
+  font-size: $md-font;
+  margin: 0px 20px;
+}
+.linkButton:hover {
+  opacity: 100%;
+  color: $color-primary;
+}
