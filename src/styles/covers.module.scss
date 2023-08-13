@@ -69,12 +69,12 @@
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 27px;
   filter: grayscale(1);
-  transition: 0.3s;
+  transition: 0.1s;
   text-align: center;
 }
 
 .card:hover {
-  transition: 0.3s;
+  transition: 0.1s;
   filter: grayscale(0);
-  transform: scale(1.02);
+  transform: scale(1.01);
 }

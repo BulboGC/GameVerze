@@ -1,8 +1,6 @@
 import "../styles/globals.css";
+import "../../public/fonts/fonts.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="luxury">
       {/* themes: dark, winter */}
-      <body className={inter.className} style={{ backgroundColor: "#141414" }}>
-        {children}
-      </body>
+      <body className="bg-black">{children}</body>
     </html>
   );
 }

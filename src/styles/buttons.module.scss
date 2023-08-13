@@ -2,7 +2,10 @@
 
 /* ----------------------------- Primary button ----------------------------- */
 .primaryButton {
-  padding: 0px 20px;
+  padding: 10px 20px;
+  font-family: $font-inter;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   background-color: transparent;
   border-radius: 20px;
   position: relative;
@@ -10,6 +13,7 @@
   font-weight: 600;
   font-size: $sm-font;
   border: 1px solid;
+  transition: 0.2s;
   z-index: 1;
 }
 .primaryButton::before,
@@ -39,7 +43,9 @@
   width: 200px;
 }
 .primaryButton:hover {
-  color: rgb(10, 25, 30);
+  transition: 0.2s;
+  font-weight: 700;
+  color: #141414;
 }
 .primaryButton:active {
   filter: brightness(0.8);

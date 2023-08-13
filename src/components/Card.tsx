@@ -1,12 +1,12 @@
 import covers from "../styles/covers.module.scss";
 import text from "../styles/text.module.scss";
-import { GameData } from "../components/interfaces";
+import { GameData } from "./interfaces";
 
-const jsonData: GameData[] = require("../components/dados.json");
+type CardProps = {
+  data: GameData;
+};
 
-export default function Card(props): JSX.Element {
-  const nome = dados.name;
-
+const Card = ({ data }: CardProps) => {
   return (
     <div className={covers.card}>
       <div className="card w-full h-full bg-base-100 shadow-xl image-full">
@@ -18,9 +18,11 @@ export default function Card(props): JSX.Element {
           />
         </figure>
         <div className="card-body">
-          <h2 className={text.cardTXT}>{nome}</h2>
+          <h2 className={text.cardTXT}>{data.name}</h2>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Card;

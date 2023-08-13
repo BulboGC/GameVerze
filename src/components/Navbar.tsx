@@ -24,32 +24,21 @@ export default function Navbar() {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a className={text.linkTXT}>Home</a>
+            <a className={text.linkTXT} href="/">
+              Home
+            </a>
           </li>
           <li>
-            <a className={text.linkTXT}>Games</a>
-          </li>
-          <li>
-            <details>
-              <summary className={text.linkTXT}>Filters</summary>
-              <ul
-                className={`${covers.filters} dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52`}
-              >
-                <li>
-                  <a className={text.linkTXT}>Link 1</a>
-                </li>
-                <li>
-                  <a className={text.linkTXT}>Link 2</a>
-                </li>
-              </ul>
-            </details>
+            <a className={text.linkTXT} href="/games">
+              Games
+            </a>
           </li>
         </ul>
-        <div className="form-control">
+        <div className="form-control mr-5">
           <input
             type="text"
             placeholder="Search"
-            className={`${text.linkTXT} border-white input input-bordered w-32 md:w-auto bg-transparent`}
+            className={`${text.linkTXT} border-white input input-bordered w-10 md:w-auto bg-transparent`}
           />
         </div>
       </div>
