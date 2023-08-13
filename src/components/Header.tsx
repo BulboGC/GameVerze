@@ -9,6 +9,7 @@ export default function Header() {
       <div className={`${covers.divHeader} flex flex-col text-focus-in`}>
         <div className={`${covers.backgroundImage} grayscale`} />
         <div className={`${covers.gradient} grayscale`} />
+
         {/*wow creations texto*/}
         <div className={covers.logoBG}>
           <div className="hidden md:block">
@@ -30,6 +31,7 @@ export default function Header() {
             ></Image>
           </div>
         </div>
+
         {/*texto header para telas BG - MD*/}
         <p className={`${text.smallHDTXT}`}>SEE THE FAVORITES</p>
         <Image
