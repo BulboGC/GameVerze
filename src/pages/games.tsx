@@ -9,9 +9,12 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import button from "../styles/buttons.module.scss";
 
+//itens por pagina
 const ITEMS_PER_PAGE = 24;
+//botões maximos de paginas
 const PAGE_RANGE_DISPLAY = 5;
 
+//pegar as infos do json
 export async function getStaticProps(context: GetStaticPropsContext) {
   const userData = await fs.promises.readFile("dados.json", "utf-8");
   const data = JSON.parse(userData);
@@ -22,6 +25,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 export default function IndexPage({ data }: { data: GameData[] }) {
+  //trazer as infos por paginação
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
 
@@ -53,9 +57,12 @@ export default function IndexPage({ data }: { data: GameData[] }) {
     return pageNumbers;
   };
 
+  //pagina games
   return (
     <>
+      {/* --------------------------------- Navbar --------------------------------- */}
       <Navbar />
+      {/* --------------------------------- GameGrid --------------------------------- */}
       <div className="py-20 bg-black">
         <div className="flex align-center justify-center my-10 mx-0 md:mx-10 lg:mx-20">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center">
@@ -83,6 +90,7 @@ export default function IndexPage({ data }: { data: GameData[] }) {
           </div>
         </div>
       </div>
+      {/* --------------------------------- Navbar --------------------------------- */}
       <Footer />
     </>
   );

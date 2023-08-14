@@ -24,8 +24,13 @@ font-family: 'Inter', sans-serif (100 a 800);
 /* ---------------------------- animations global --------------------------- */
 
 .text-focus-in {
-  -webkit-animation: text-focus-in 1s ease-in-out alternate both;
-  animation: text-focus-in 1s ease-in-out alternate both;
+  -webkit-animation: text-focus-in 0.8s ease-in-out alternate both;
+  animation: text-focus-in 0.8s ease-in-out alternate both;
+}
+
+.delay-focus-in {
+  -webkit-animation: text-focus-in 0.8s 0.5s ease-in-out alternate both;
+  animation: text-focus-in 0.8s 0.5s ease-in-out alternate both;
 }
 
 /*

@@ -11,7 +11,7 @@ export default function Header() {
         <div className={`${covers.gradient} grayscale`} />
 
         {/*wow creations texto*/}
-        <div className={covers.logoBG}>
+        <div className={`${covers.logoBG} delay-focus-in`}>
           <div className="hidden md:block">
             <Image
               src={"/logo/gameverze.svg"}
@@ -22,7 +22,7 @@ export default function Header() {
           </div>
         </div>
         <div className={covers.logoBG}>
-          <div className="md:hidden">
+          <div className="md:hidden delay-focus-in">
             <Image
               src={"/logo/gz.svg"}
               width={220}
@@ -33,13 +33,13 @@ export default function Header() {
         </div>
 
         {/*texto header para telas BG - MD*/}
-        <p className={`${text.smallHDTXT}`}>SEE THE FAVORITES</p>
+        <p className={`${text.smallHDTXT} delay-focus-in`}>SEE THE FAVORITES</p>
         <Image
           src={"/icons/seta.svg"}
           width={50}
           height={50}
           alt="gameverze"
-          className={`${covers.iconSeta}`}
+          className={`${covers.iconSeta} delay-focus-in`}
         ></Image>
       </div>
     </>

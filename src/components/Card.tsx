@@ -9,7 +9,7 @@ type CardProps = {
 const Card = ({ data }: CardProps) => {
   return (
     <div className={`${covers.card}`}>
-      <div className="card w-full h-full bg-base-100 shadow-xl image-full">
+      <div className="card w-full h-full text-focus-in shadow-xl image-full">
         <figure>
           <img
             className="rounded-lg"

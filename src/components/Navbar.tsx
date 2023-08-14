@@ -10,7 +10,7 @@ export default function Navbar() {
     <div
       className={`${navbar.backNav} sticky top-0 z-50 navbar backdrop-blur-xl bg-white/50`}
     >
-      <div className="flex-1">
+      <a className="flex-1">
         {/* logo for desktop */}
         <Image
           src={"/logo/gz.svg"}
@@ -19,7 +19,7 @@ export default function Navbar() {
           alt="..."
           className="ml-5 hidden md:block"
         ></Image>
-      </div>
+      </a>
 
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
@@ -33,14 +33,12 @@ export default function Navbar() {
               Games
             </a>
           </li>
+          <li className="mr-5">
+            <a className={text.linkTXT} href="/games">
+              Filters
+            </a>
+          </li>
         </ul>
-        <div className="form-control mr-5">
-          <input
-            type="text"
-            placeholder="Search"
-            className={`${text.linkTXT} border-white input input-bordered w-10 md:w-auto bg-transparent`}
-          />
-        </div>
       </div>
     </div>
   );
