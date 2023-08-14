@@ -2,7 +2,7 @@
 
 /* ----------------------------- Primary button ----------------------------- */
 .primaryButton {
-  padding: 10px 20px;
+  padding: 10px 13px;
   font-family: $font-inter;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -45,10 +45,24 @@
 .primaryButton:hover {
   transition: 0.2s;
   font-weight: 700;
-  color: #141414;
+  color: $color-secondary;
 }
 .primaryButton:active {
   filter: brightness(0.8);
+}
+
+.selectedButton {
+  padding: 10px 13px;
+  font-family: $font-inter;
+  background-color: $color-primary;
+  color: $color-secondary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: $sm-font;
+  border: 1px solid;
+  transition: 0.2s;
 }
 
 /* ------------------------------ Link button ------------------------------- */

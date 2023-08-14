@@ -12,7 +12,7 @@ import Card from "../components/Card";
 import fs from "fs";
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const userData = await fs.promises.readFile("dados.json", "utf-8");
+  const userData = await fs.promises.readFile("fav.json", "utf-8");
   const data = await JSON.parse(userData);
 
   return {
@@ -22,14 +22,14 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 export default function index({ data }: { data: GameData[] }) {
   return (
-    <div className="bg-black">
+    <div className="pt-20 bg-black">
       <Navbar />
       <Header />
-      <div className="flex align-center justify-center my-10 mr-3 md:mr-0">
-        <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-10">
-          {/*{data.map((element): JSX.Element => {
+      <div className="flex align-center justify-center my-10 mx-0 md:mx-10 lg:mx-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center">
+          {data.map((element): JSX.Element => {
             return <Card data={element} />;
-          })}*/}
+          })}
         </div>
       </div>
       <Footer />
