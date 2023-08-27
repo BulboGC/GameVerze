@@ -4,9 +4,9 @@ import cards from "../../../components/Cards/cards.module.scss";
 
 import Navbar from "../../../components/Navs/Navbar";
 import Footer from "../../../components/Navs/Footer";
-import Prices from "@/components/Cards/Prices";
+import Prices from "../../../components/Cards/Prices";
 import Banner from "../../../components/Banners/Banner";
-import CardGame from "@/components/Cards/cardGame";
+import CardGame from "../../../components/Cards/CardGame";
 
 export default function index() {
   return (

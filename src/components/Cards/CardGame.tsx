@@ -1,7 +1,6 @@
 //CSS
 import cards from "../Cards/cards.module.scss";
 //Interfaces
-import upperPrice from "@/components/Interfaces/IQupperPrice";
 
 const CardGame = () => {
   return (

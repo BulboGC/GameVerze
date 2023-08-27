@@ -1,7 +1,7 @@
 //CSS
 import cards from "../Cards/cards.module.scss";
 //Interfaces
-import upperPrice from "@/components/Interfaces/IQupperPrice";
+import upperPrice from "../Interfaces/IQupperPrice";
 
 type propsPrice = {
   data: upperPrice;

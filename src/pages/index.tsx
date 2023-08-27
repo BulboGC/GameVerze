@@ -3,7 +3,7 @@ import "../../public/fonts/fonts.css";
 
 import { useCallback, useEffect, useState, Suspense } from "react";
 import axios, { AxiosResponse } from "axios";
-import upperPrice from "@/components/Interfaces/IQupperPrice";
+import upperPrice from "../components/Interfaces/IQupperPrice";
 
 import Navbar from "../components/Navs/Navbar";
 import Footer from "../components/Navs/Footer";
