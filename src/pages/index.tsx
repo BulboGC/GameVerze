@@ -17,25 +17,6 @@ export default function index() {
   const [data, setData] = useState<upperPrice[] | null>(null);
 
   //fetch dos dados da API
-  const handleFetch: () => void = useCallback(async () => {
-    try {
-      const response: AxiosResponse<upperPrice[]> = await axios.get(
-        "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15"
-      );
-      console.log(response.data);
-      setData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      throw error;
-    }
-  }, []);
-
-  //Component did mount
-  useEffect(() => {
-    try {
-      handleFetch();
-    } catch {}
-  }, []);
 
   return (
     <Suspense fallback={<AlbumsGlimmer />}>
