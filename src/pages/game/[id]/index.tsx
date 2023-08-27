@@ -20,8 +20,8 @@ export const getStaticPaths: GetStaticPaths<DynamicParams> = async () => {
     "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15"
   );
   const arr = response.data;
-  const paths = arr.map((id) => ({
-    params: { id: id.dealID },
+  const paths = arr.map((id,index) => ({
+    params: { id: id.gameID },
   }));
 
   return { paths, fallback: false };
@@ -36,6 +36,9 @@ export const getStaticProps: GetStaticProps<any, DynamicParams> = async ({
 
   const id = params.id;
 
+
+
+  
   return {
     props: {
       id,
@@ -47,6 +50,7 @@ export const getStaticProps: GetStaticProps<any, DynamicParams> = async ({
 export default function index({ id }: DynamicParams) {
   return (
     <div>
+      <h1>{id}</h1>
       <Navbar />
       <div style={{ marginTop: "260px" }}>
         <Banner />
