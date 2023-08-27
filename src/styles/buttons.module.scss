@@ -64,14 +64,3 @@
   border: 1px solid;
   transition: 0.2s;
 }
-
-/* ------------------------------ Link button ------------------------------- */
-.linkButton {
-  background-color: transparent !important;
-  font-size: $md-font;
-  margin: 0px 20px;
-}
-.linkButton:hover {
-  opacity: 100%;
-  color: $color-primary;
-}

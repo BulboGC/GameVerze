@@ -21,9 +21,16 @@ font-family: 'Inter', sans-serif (100 a 800);
   background-color: 141414;
 }
 
+.center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ---------------------------- animations global --------------------------- */
 
-.text-focus-in {
+.focus-in {
   -webkit-animation: text-focus-in 0.8s ease-in-out alternate both;
   animation: text-focus-in 0.8s ease-in-out alternate both;
 }
