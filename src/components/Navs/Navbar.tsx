@@ -27,7 +27,7 @@ export default function Navbar() {
             </a>
           </li>
           <li className="mr-5">
-            <a className={navs.linkTXT} href="/filters">
+            <a className={navs.linkTXT} href="/">
               Filters
             </a>
           </li>
