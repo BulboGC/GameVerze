@@ -13,21 +13,34 @@ import Link from "next/link";
 
 // Versão correta
 
-export default function index() {
-  const [data, setData] = useState<upperPrice[] | null>(null);
+export const getStaticProps = async () => {
+  const response: AxiosResponse<upperPrice[]> = await axios.get(
+    "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15"
+  );
+  const arr = response.data;
+  
+
+  return {props:{arr}};
+};
+
+export default function index({arr}:{arr: upperPrice[]}) {
+
 
   //fetch dos dados da API
 
   return (
-    <Suspense fallback={<AlbumsGlimmer />}>
+
+ 
+    <Suspense>
       <div className="pt-20 bg-black">
         <Navbar />
         <Header />
+       
         <div className="flex align-center justify-center my-10 mx-0 md:mx-10 lg:mx-20">
           <div className="pt-20 grid grid-cols-2 md:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-7 place-items-center">
-            {data?.map((data, index) => {
+            {arr.map((data, index) => {
               return (
-                <Link href={`/game/${data.steamAppID}`}>
+                <Link href={`/game/${data.gameID}`}>
                   <Games key={index} data={data} />
                 </Link>
               );
@@ -40,15 +53,7 @@ export default function index() {
   );
 }
 
-function AlbumsGlimmer() {
-  return (
-    <div className="glimmer-panel">
-      <div className="glimmer-line" />
-      <div className="glimmer-line" />
-      <div className="glimmer-line" />
-    </div>
-  );
-}
+
 
 // vvvvv Versão de edição vvvvv
 /*
